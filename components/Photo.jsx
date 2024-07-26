@@ -12,8 +12,7 @@ const Photo = () => {
          </div>
       </motion.div>
     </div>
-    
-  )
+  );
 }
 
 export default Photo

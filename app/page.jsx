@@ -12,7 +12,7 @@ const Home = () => {
           {/* Text */}
           <div className="text-center xl:text-left">
             <span className="text-xl">Software Developer</span>
-            <h1 className="h1">Hello I'm <br /> <span class="text-accent">Rohan Sonawane</span></h1>
+            <h1 className="h1">Hello I'm <br /> <span className="text-accent">Rohan Sonawane</span></h1>
             <p className="max-w-[500px] mb-9 text-white/80">I excel at creating elegant digital experience and I am proficient in various programming language</p>
             
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -32,7 +32,7 @@ const Home = () => {
       </div>
 
     </section>
-  )
+  );
 }
 
 export default Home
