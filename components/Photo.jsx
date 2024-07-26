@@ -12,6 +12,7 @@ const Photo = () => {
          </div>
       </motion.div>
     </div>
+    
   )
 }
 
