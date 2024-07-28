@@ -21,5 +21,8 @@
   .text-outline-hover{
     -webkit-text-stroke: 1px #00ff99;
   }
+  .front{
+    z-index:2;
+  }
 }
 

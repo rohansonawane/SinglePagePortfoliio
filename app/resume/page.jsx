@@ -1,18 +1,18 @@
 "use client";
 
-import {FaHtml5,FaCss3,FaJs,FaReact,FaFigma,FaNodeJs} from 'react-icons/fa';
+import {FaHtml5,FaCss3,FaJs,FaReact,FaFigma,FaNodeJs,FaWordpress,FaShopify,FaPython,FaPhp} from 'react-icons/fa';
 import {SiTailwindcss, SiNextdotjs} from 'react-icons/si';
-
+import Social from '@/components/Social';
 
 // about data
 
 const about = {
   title: 'About me',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam repudiandae itaque veritatis? Dolorem molestias, incidunt tempora error sit itaque voluptatum, enim consequatur, dolor voluptates quisquam vitae rerum qui officia.",
+  description: "A Full Stack Developer and AI/ML enthusiast with 7+ years of experience. Currently pursuing an MS in Computer Science at CSUDH, I specialize in creating innovative tech solutions.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman"
+      fieldValue: "Rohan Sonawane"
     },
     {
       fieldName: "Phone",
@@ -27,10 +27,6 @@ const about = {
       fieldValue: "Los Angeles, CA"
     },
     {
-      fieldName: "Freelance",
-      fieldValue: "Available"
-    },
-    {
       fieldName: "Email",
       fieldValue: "rohansonawane28@gmail.com"
     },
@@ -39,23 +35,33 @@ const about = {
 
 const experience = {
   icon: '/assets/resume/badge.svg',
-  title: 'My experience',
-  description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis quaerat tempora vel consectetur voluptatem earum error, eaque aut nisi amet a magni eius impedit cum ullam sunt exercitationem architecto!', 
+  title: 'My Experience',
+  description:"As a Full Stack Web Developer with over seven years of experience, I've specialized in crafting secure, high-quality web solutions that prioritize user experience and system performance. My expertise spans a wide range of technologies, including PHP, Python, JavaScript (React.js, Node.js), SQL, and more.", 
   items:[
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022-Present"
+      company: "CSUDH",
+      position: "AR/VR Developer",
+      duration: "2023-Present"
     },
     {
-      company: "Web Development company 2",
-      position: "Full Stack Developer",
-      duration: "2020-2022"
+      company: "Self-Employed",
+      position: "Full Stack Web Developer",
+      duration: "2020-2023"
     },
     {
-      company: "Web Development company 3",
-      position: "Full Stack Developer",
-      duration: "2020-2022"
+      company: "Briefkase",
+      position: "TechLead - Web Developer",
+      duration: "2019-2020"
+    },
+    {
+      company: "Briefkase",
+      position: "Senior - Web Developer",
+      duration: "2017-2019"
+    },
+    {
+      company: "Briefkase",
+      position: "Junior - Web Developer",
+      duration: "2016-2017"
     },
   ]
 };
@@ -63,16 +69,16 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: "My Education",
-  description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis quaerat tempora vel consectetur voluptatem earum error, eaque aut nisi amet a magni eius impedit cum ullam sunt exercitationem architecto!", 
+  description:"I am currently pursuing a Master of Science in Computer Science at California State University, Dominguez Hills. With a solid foundation in software engineering and over seven years of industry experience, I specialize in AI, web development, and innovative tech solutions. My academic journey and hands-on experience enable me to stay at the forefront of emerging technologies.", 
   items:[
     {
       institution: "CSUDH",
-      degree: "MS Computer Science",
+      degree: "Masters in CS",
       duration: "2023-2025"
     },
     {
       institution: "PVPPCOE",
-      degree: "BE IT",
+      degree: "Bachelors in IT",
       duration: "2012-2016"
     } 
   ]
@@ -81,8 +87,16 @@ const education = {
 const skills = {
   icon: '/assets/resume/cap.svg',
   title: "My skills",
-  description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis quaerat tempora vel consectetur voluptatem earum error, eaque aut nisi amet a magni eius impedit cum ullam sunt exercitationem architecto!", 
+  description:"Expert in Full Stack Development, AI, and Machine Learning, with proficiency in PHP, Python, JavaScript, and frameworks like Django. Skilled in cloud platforms (AWS) and digital marketing for comprehensive solutions.", 
   skilllist:[
+    {
+      icon:<FaPython />,
+      name: "Python"
+    },
+    {
+      icon:<FaPhp />,
+      name: "PHP"
+    },
     {
       icon: <FaHtml5 />,
       name: "html 5"
@@ -114,17 +128,23 @@ const skills = {
     {
       icon: <FaFigma />,
       name: "Figma"
-    }
+    },
+    {
+      icon:<FaWordpress />,
+      name: "WordPress"
+    },
+    {
+      icon:<FaShopify />,
+      name: "Shopify"
+    },
+
     
   ]
 }
 
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
-
 import {ScrollArea} from '@/components/ui/scroll-area';
-
 import {motion} from 'framer-motion';
 
 const Resume = () => {
@@ -138,7 +158,11 @@ const Resume = () => {
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
+            <div className="mb-8 xl:mb-0">
+            <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" />
+          </div>
           </TabsList>
+          
 
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
@@ -229,6 +253,7 @@ const Resume = () => {
             </TabsContent>
           </div>
         </Tabs>
+        
       </div>
     </motion.div>
   )

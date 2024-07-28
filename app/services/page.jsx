@@ -7,25 +7,37 @@ const services = [
   {
     num: '01',
     title: 'Web Development',
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    description: "Create bespoke websites using modern frameworks and technologies, tailored to your brand and business needs.",
     href: ""
   },
   {
     num: '02',
     title: 'UI/UX Design',
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    description: "Create intuitive, user-friendly interfaces that enhance user experience and drive engagement.",
     href: ""
   },
   {
     num: '03',
-    title: 'Brand Design',
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    title: 'AI-Driven Web Applications',
+    description: "Integrate artificial intelligence into web applications to enhance user experience, automate tasks, and provide personalized services.",
     href: ""
   },
   {
     num: '04',
-    title: 'Web Optimization',
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    title: 'API Development & Integration',
+    description: "Build and integrate custom APIs to connect your applications, streamline processes, and enhance functionality across platforms.",
+    href: ""
+  },
+  {
+    num: '05',
+    title: 'API Development & Integration',
+    description: "Build and integrate custom APIs to connect your applications, streamline processes, and enhance functionality across platforms.",
+    href: ""
+  },
+  {
+    num: '06',
+    title: 'SEO & Performance Optimization',
+    description: "Optimize your website for search engines and improve loading times to increase visibility, traffic, and user engagement.",
     href: ""
   },
 ];
@@ -41,7 +53,7 @@ const Services = () => {
         {services.map((service, index) =>{
           return <div key={index} className="flex-1 flex flex-col justify-center gap-6 group">
             <div className="w-full flex justify-between items-center">
-              <div class="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover ">{service.num}</div>
+              <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover ">{service.num}</div>
               <Link href={service.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                 <BsArrowDownRight className="text-primary text-3xl"/>
               </Link>

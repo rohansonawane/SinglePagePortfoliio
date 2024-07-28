@@ -41,7 +41,7 @@ const Contact = () => {
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" action="">
               <h3 className="text-4xl text-accent">Let's Work Together</h3>
-              <p className="text-white/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut asperiores quaerat ratione aspernatur soluta atque, voluptatibus reprehenderit dolorum sed, veniam voluptatum molestiae nemo cumque deleniti, magnam voluptas necessitatibus quae amet!</p>
+              <p className="text-white/60"></p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />
                 <Input type="lastname" placeholder="Lastname" />

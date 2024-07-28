@@ -15,45 +15,52 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 const projects = [
   {
     num:'01',
-    category:'frontend',
-    title:'project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ipsum unde, assumenda cupiditate quasi esse eveniet obcaecati officia sit sunt? Ab in magnam cupiditate, ipsa esse necessitatibus saepe quam sed.',
+    category:'Full Stack',
+    title:'Interactive Hate Map',
+    description: "An interactive hate map that tracks incidents of gender-based, castes, ethnic, and communal violence in India.",
     stack:[
       {name: "HTML5"},
-      {name:"Css 3"},
-      {name:"JavaScript"},
+      {name:"CSS3"},
+      {name:"JS"},
+      {name:"PHP"},
+      {name:"Mapbox API"},
+      {name:"Rest API"},
     ],
     image: '/assets/work/thumb1.png',
-    live: "",
+    live: "https://cjp.org.in/hate-map",
     github:"",
   },
   {
     num:'02',
     category:'frontend',
-    title:'project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ipsum unde, assumenda cupiditate quasi esse eveniet obcaecati officia sit sunt? Ab in magnam cupiditate, ipsa esse necessitatibus saepe quam sed.',
+    title:'VR Algorand Explorer',
+    description: 'This project combines virtual reality (VR) technology with Algorand Explorer functionality and a Pera Wallet user interface',
     stack:[
       {name: "HTML5"},
-      {name:"Css 3"},
-      {name:"JavaScript"},
+      {name:"CSS3"},
+      {name:"JS"},
+      {name:"Aframe.js"},
+      {name:"Algorand API"},
     ],
     image: '/assets/work/thumb2.png',
-    live: "",
-    github:"",
+    live: "https://www.youtube.com/watch?v=PmEW1usHfR8",
+    github:"https://github.com/rohansonawane/arvr-crypto",
   },
   {
     num:'03',
-    category:'frontend',
-    title:'project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ipsum unde, assumenda cupiditate quasi esse eveniet obcaecati officia sit sunt? Ab in magnam cupiditate, ipsa esse necessitatibus saepe quam sed.',
+    category:'Full Stack',
+    title:'Comment Remover',
+    description: 'Comment Remover is an online web application designed to streamline code cleanup by removing comments from files of various types, including PHP, JavaScript, HTML, and more. This utility helps in enhancing code readability and maintainability, making it easier to manage and understand.',
     stack:[
-      {name: "HTML5"},
-      {name:"Css 3"},
-      {name:"JavaScript"},
+      {name: "JS"},
+      {name:"PHP"},
+      {name:"HTML5"},
+      {name:"CSS3"},
+      {name:"C"},
     ],
     image: '/assets/work/thumb3.png',
-    live: "",
-    github:"",
+    live: "#",
+    github:"https://github.com/rohansonawane/comment-remover",
   },
 
 ];
@@ -124,18 +131,19 @@ const Work = () => {
           </div>
           <div className="w-full xl:w-[50%]">
             <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
-              {projects.map((project,index)=>{
-                return <SwiperSlide key="{index}" className="w-full">
+              <WorkSliderBtns containerStyles="front flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 x-20 w-full justify-between xl:w-max xl:justify-none" 
+              btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" />
+              {projects.map((project, index)=>{
+                return <SwiperSlide key={index} className="w-full">
                   <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                   <div>
-                    <Image src={project.image} fill className="object-cover" alt={project.name}/>
+                    <Image src={project.image} fill className="object-cover" alt={project.title}/>
                   </div>
                   </div>
                 </SwiperSlide>
               })}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 x-20 w-full justify-between xl:w-max xl:justify-none" 
-              btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" />
+              
             </Swiper>
           </div>
         </div>
