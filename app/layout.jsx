@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const jetbrainsMono = JetBrains_Mono({ 
   subsets: ["latin"], 
@@ -20,6 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-5727CZ8R" />
       <body className={jetbrainsMono.variable}>
         <Header />
         <StairTransition />
