@@ -20,7 +20,7 @@ const Home = () => {
               
               <Link href="/assets/Rohan_Sooftware_Developer_Resume.pdf" target="_blank">
               <Button download variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Download CV</span>
+                <span>Download Resume</span>
                 <FiDownload className="text-xl" />
               </Button>
               </Link>
