@@ -38,7 +38,7 @@ const Contact = () => {
     className="py-6">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
-          <div className="xl:w-[54%] order-2 xl:order-none">
+          <div className="xl:w-[54%] order-2 xl:order-none hidden">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" action="">
               <h3 className="text-4xl text-accent">Let's Work Together</h3>
               <p className="text-white/60"></p>
@@ -65,7 +65,7 @@ const Contact = () => {
               <Button size="md" className="max-w-40">Send Message</Button>
             </form>
           </div>
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="flex-1 flex items-center order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {infor.map((item,index)=>{
                 return <li key={index} className="flex items-center gap-6">
