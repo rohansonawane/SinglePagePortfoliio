@@ -30,12 +30,6 @@ const services = [
   },
   {
     num: '05',
-    title: 'API Development & Integration',
-    description: "Build and integrate custom APIs to connect your applications, streamline processes, and enhance functionality across platforms.",
-    href: ""
-  },
-  {
-    num: '06',
     title: 'SEO & Performance Optimization',
     description: "Optimize your website for search engines and improve loading times to increase visibility, traffic, and user engagement.",
     href: ""
