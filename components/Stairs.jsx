@@ -4,12 +4,15 @@ import {animate, motion} from "framer-motion";
 const stairAnimation = {
   initial: {
     top: "0%",
+    opacity: 1
   },
   animate: {
     top: "100%",
+    opacity:0
   },
   exit: {
     top: ["100%", "0%"],
+    opacity: [1, 0]
   },
 };
 

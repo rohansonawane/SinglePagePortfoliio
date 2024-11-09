@@ -2,7 +2,7 @@
 
 import {FaHtml5,FaCss3,FaJs,FaReact,FaFigma,FaNodeJs,FaWordpress,FaShopify,FaPython,FaPhp} from 'react-icons/fa';
 import {SiTailwindcss, SiNextdotjs} from 'react-icons/si';
-import Social from '@/components/Social';
+
 
 // about data
 
@@ -149,9 +149,10 @@ import {motion} from 'framer-motion';
 
 const Resume = () => {
   return (
-    <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{ delay: 2.4, duration:0.4, ease: 'easeIn'}}}
-    className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+    <motion.section initial={{opacity:0}} animate={{opacity:1, transition:{ delay: 2.4, duration:0.4, ease: 'easeIn'}}}
+    className=" flex items-center justify-center py-12" id="about-me">
       <div className="container mx-auto">
+        <h2 className="h2 section-title text-center text-accent">About Me</h2>
         <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
@@ -159,7 +160,7 @@ const Resume = () => {
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
             <div className="mb-8 xl:mb-0">
-            <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" />
+            
           </div>
           </TabsList>
           
@@ -255,7 +256,7 @@ const Resume = () => {
         </Tabs>
         
       </div>
-    </motion.div>
+    </motion.section>
   )
 }
 

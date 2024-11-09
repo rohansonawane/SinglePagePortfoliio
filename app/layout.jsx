@@ -5,6 +5,11 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import Services from "@/app/services/Services";
+import Resume from "@/app/resume/Resume";
+import Contact from "@/app/contact/Contact";
+import Work from "@/app/work/Work";
+import Home from "@/app/Home";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 const jetbrainsMono = JetBrains_Mono({ 
@@ -18,7 +23,7 @@ export const metadata = {
   description: "Full Stack Software Developer | AI / ML | Docker, CI/CD, Jenkins | PHP, Python, JavaScript (React, Node, Next) | WordPress | UI/UX Designer | Blender, Unity Developer | API Integration Specialist | Testing",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout() {
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-5727CZ8R" />
@@ -26,7 +31,11 @@ export default function RootLayout({ children }) {
         <Header />
         <StairTransition />
         <PageTransition>
-          {children}
+          <Home />
+          <Services />
+          <Resume />
+          <Work />
+          <Contact />
         </PageTransition>
         </body>
     </html>

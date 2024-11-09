@@ -12,19 +12,19 @@ const links = [
    },
    {
       name: "services",
-      path: "/services",
+      path: "#services",
    },
    {
-      name: "resume",
-      path: "/resume",
+      name: "about",
+      path: "#about-me",
    },
    {
-      name: "work",
-      path: "/work",
+      name: "projects",
+      path: "#projects",
    },
    {
       name: "contact",
-      path: "/contact",
+      path: "#contact",
    }
 ];
 
@@ -46,10 +46,11 @@ const MobileNav = () => {
 
          {/* Nav */}
          
+         
          <nav className="flex flex-col justify-center items-center gap-8">
          {links.map((link, index) => {
             return (
-            <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`}>
+            <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`} scroll={true}>
                {link.name}
                </Link>
             );

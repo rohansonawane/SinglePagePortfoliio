@@ -80,8 +80,9 @@ const Work = () => {
       opacity:1,
     transition:{delay:2.4, duration:0.4, ease:"easeIn"
     }}}
-    className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
+    className="min-h-[80vh] flex flex-col justify-center py-12" id="projects">
       <div className="container mx-auto">
+        <h2 className="h2 section-title text-center text-accent">Projects</h2>
         <div className="flex flex-col xl:flex-row xl:gap-[30px] h-[50%]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px]">
