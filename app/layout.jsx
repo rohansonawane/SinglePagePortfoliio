@@ -9,7 +9,7 @@ import Services from "@/app/services/Services";
 import Resume from "@/app/resume/Resume";
 import Contact from "@/app/contact/Contact";
 import Work from "@/app/work/Work";
-import Home from "@/app/Home";
+import Home from "@/app/Home/Home";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 const jetbrainsMono = JetBrains_Mono({ 
